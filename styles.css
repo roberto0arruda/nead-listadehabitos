@@ -1,0 +1,31 @@
+.center {
+    margin-left: auto;
+    margin-right: auto;
+    width: 350px;
+}
+
+body {
+    background-color: #C7E123
+}
+
+a {
+    font-family: sans-serif;
+    color: #7C6B6B
+}
+
+p, th, h1, input {
+    font-family: sans-serif;
+}
+
+input {
+    background-color: #B7CE20;
+    border: 0;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+table, td, th {
+    border: 1px solid black;
+}
