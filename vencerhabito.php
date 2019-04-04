@@ -1,17 +1,7 @@
 <?php
 
-$servidor       = "mysql";
-$usuario        = "root";
-$senha          = "root";
-$bancodedados   = "listadehabito";
-
-// cria a conexao
-$conn = new mysqli($servidor, $usuario, $senha, $bancodedados);
-
-// verifica se conectou com sucesso
-if ($conn->connect_error) {
-    die("Falha ao conectar: ". $conn->connect_error);
-}
+require_once('conexao.php');
+$conn = fObtemConexao();
 
 // Atualiza do status de A - ativo para V- vencido
 $id = $_GET["id"];

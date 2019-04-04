@@ -1,17 +1,6 @@
 <?php
-
-$servidor       = "mysql";
-$usuario        = "root";
-$senha          = "root";
-$bancodedados   = "listadehabito";
-
-// cria a conexao
-$conn = new mysqli($servidor, $usuario, $senha, $bancodedados);
-
-// Verifica se conectou Com sucesso
-if ($conn->connect_error) {
-    die("A conexão falhou: ". $conn->connect_error);
-}
+require_once('conexao.php');
+$conn = fObtemConexao();
 
 // Obtém o id do registro que foi recebido via get
 $id = $_GET["id"];

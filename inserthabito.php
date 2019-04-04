@@ -1,17 +1,7 @@
 <?php
 
-$servidor       = "mysql";
-$usuario        = "root";
-$senha          = "root";
-$bancodedados   = "listadehabito";
-
-// Abre a conexao com o banco
-$conexao = new mysqli($servidor, $usuario, $senha, $bancodedados);
-
-// verifica se houve erro ao abrir a conexao
-if ($conexao->connect_error) {
-    die("A conexao falhou: ". $conexao->connect_error);
-}
+require_once('conexao.php');
+$conexao = fObtemConexao();
 
 // Recebe o nome que vem do form
 $nome = $_GET["nome"];

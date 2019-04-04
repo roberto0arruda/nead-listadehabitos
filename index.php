@@ -13,19 +13,8 @@
         <p>Cadastre aqui os hábitos que você tem que vencer para melhorar sua vida!</p>
         <?php
             // Obtém a lista de hábitos do
-        $servidor       = "mysql";
-        $usuario        = "root";
-        $senha          = "root";
-        $bancodedados   = "listadehabito";
-
-        // Cria uma conexão com o banco de dados
-        // banco de dados MySQL
-        $conexao = new mysqli($servidor, $usuario, $senha, $bancodedados);
-
-        // Verifica a conexão
-        if ($conexao->connect_error) {
-            die("Falha na conexão: " . $conexao->connect_error);
-        }
+            require_once('conexao.php');
+        $conexao = fObtemConexao();
 
         // Executa a query da variável $sql
         $sql = "SELECT id, nome FROM habito WHERE status = 'A'";
